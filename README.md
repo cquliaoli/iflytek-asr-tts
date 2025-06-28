@@ -10,7 +10,7 @@ npm install react-native-iflytek-asr-tts
 React Native 下的科大讯飞语音库，可以进行语音识别与语音合成。
 
 ## Install
-```
+```shell
 yarn add react-native-speech-iflytek
 react-native link
 ```
@@ -32,18 +32,22 @@ android平台权限
    ```
 ## Usage
 （详见 Example）引入包：
-```
+```javascript
 import { Recognizer, Synthesizer, SpeechConstant } from "react-native-iflytek-asr-tts";
 ```
 语音识别：
-```
+```javascript
 Recognizer.init("57c7c5b0");
 this.recognizerEventEmitter = new NativeEventEmitter(Recognizer);
 this.recognizerEventEmitter.addListener('onRecognizerResult', this.onRecognizerResult);
 Recognizer.start();
 ```
-处理识别结果：
+动态修正：
+```javascript
+Recognizer.setParameter(SpeechConstant.DWA_ON, 'wpgs');
 ```
+处理识别结果：
+```javascript
 onRecognizerResult(e) {
     if (!e.isLast) {
         return;
@@ -117,7 +121,7 @@ onRecognizerResult(e) {
 
 ### SpeechConstant
 本模块包含讯飞接口的所有常量，如设置发言人、发言速度等，详见讯飞文档，使用示例：
-```
+```javascript
 Synthesizer.setParameter(SpeechConstant.VOICE_NAME, "xiaoyu");
 ```
 
