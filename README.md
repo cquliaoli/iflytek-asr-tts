@@ -43,10 +43,11 @@ Recognizer.setParameter(SpeechConstant.DWA_ON, 'wpgs');
 ```
 处理识别结果：
 ```javascript
-onRecognizerResult(e) {
-    if (!e.isLast) {
-        return;
-    }
+onRecognizerResult(e)
+{
+    //if (!e.isLast) {
+    //    return;
+    //}
     this.setState({ text: e.result });
 }
 ```

@@ -1,6 +1,6 @@
 {
   "name": "react-native-iflytek-asr-tts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "iflytek-asr-tts",
   "source": "./src/index.tsx",
   "main": "./lib/module/index.js",
