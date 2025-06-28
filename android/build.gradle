@@ -56,6 +56,12 @@ android {
       minifyEnabled false
     }
   }
+  sourceSets {
+    main {
+      assets.srcDirs = ['src/main/assets']
+      jniLibs.srcDirs = ["libs"]
+    }
+  }
 
   lintOptions {
     disable "GradleCompatible"
@@ -76,6 +82,8 @@ def kotlin_version = getExtOrDefault("kotlinVersion")
 
 dependencies {
   implementation "com.facebook.react:react-android"
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation files('libs/Msc.jar')
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 

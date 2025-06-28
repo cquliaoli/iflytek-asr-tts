@@ -8,7 +8,12 @@ import com.facebook.react.uimanager.ViewManager
 
 class IflytekAsrTtsPackage : ReactPackage {
   override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return listOf(IflytekAsrTtsModule(reactContext))
+    return listOf(
+      IflytekAsrTtsModule(reactContext),
+      SpeechRecognizerModule(reactContext),
+      SpeechSynthesizerModule(reactContext),
+      SpeechConstantModule(reactContext)
+    )
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {

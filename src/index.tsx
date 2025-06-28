@@ -17,6 +17,14 @@ const IflytekAsrTts = NativeModules.IflytekAsrTts
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
+function multiply(a: number, b: number): Promise<number> {
   return IflytekAsrTts.multiply(a, b);
 }
+
+const SpeechConstant = NativeModules.SpeechConstantModule;
+
+const Recognizer = NativeModules.SpeechRecognizerModule;
+
+const Synthesizer = NativeModules.SpeechSynthesizerModule;
+
+export { multiply, SpeechConstant, Recognizer, Synthesizer };
