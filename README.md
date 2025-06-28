@@ -1,16 +1,11 @@
 # react-native-iflytek-asr-tts
 
-iflytek-asr-tts
+iflytek-asr-tts：React Native 下的科大讯飞语音库，可以进行语音识别与语音合成。
 
 ## Installation
 
 ```sh
 npm install react-native-iflytek-asr-tts
-```
-React Native 下的科大讯飞语音库，可以进行语音识别与语音合成。
-
-## Install
-```shell
 yarn add react-native-speech-iflytek
 react-native link
 ```
