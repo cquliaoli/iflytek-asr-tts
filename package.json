@@ -47,7 +47,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://www.schttech.com/.git"
+    "url": "git+https://github.com/cquliaoli/iflytek-asr-tts"
   },
   "author": "ht <yichenliao4791@163.com> (https://www.schttech.com)",
   "license": "MIT",
